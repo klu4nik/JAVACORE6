@@ -4,28 +4,33 @@ package main.java.com.andrii.practice.module02.task022;
  * Created by Klu4nik on 13/02/2017.
  */
 public class Withdrawal {
-    public static void main(String[] args){
-        int balance = 100;
-        int withdrawal = 10;
-        moneysend(balance,withdrawal);
+    public static final double COMISSION_FIVE_PERCENT = 0.05;
 
-        balance=100;
-        withdrawal=99;
-        moneysend(balance,withdrawal);
+    public static void main(String[] args) {
+        Withdrawal withdrawals = new Withdrawal();
+        int balance = 100;
+        int withdrawal1 = 10;
+        withdrawals.moneysend(balance, withdrawal1);
+
+        balance = 100;
+        withdrawal1 = 99;
+
+        withdrawals.moneysend(balance, withdrawal1);
 
     }
+
     /*
     Method gets balance and withdrawal and print a information about operation
      */
-    private void moneysend(int balance, int withdrawal){
-        if(withdrawal*1.05<balance){
-            double comission=0.05*withdrawal;
-            balance-=1.05*withdrawal;
-            System.out.println("Ok " + comission + " " + balance );
-            return true;
+    public int moneysend(int balance, int withdrawal) {
+        if (withdrawal * (1 + COMISSION_FIVE_PERCENT) < balance) {
+            double comission = COMISSION_FIVE_PERCENT * withdrawal;
+            balance -= (1 + COMISSION_FIVE_PERCENT) * withdrawal;
+            System.out.println("Ok. Your payment" + withdrawal + " was succesfull. Comission: " + comission + " Current balance" + balance);
+            return balance;
         } else {
-            System.out.println("No");
-            return false;
+            System.out.println("No. Payment was declined. You doesn't have enough money. Your balance:" + balance);
+            return balance;
         }
 
     }

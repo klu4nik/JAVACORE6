@@ -6,7 +6,7 @@ package main.java.com.andrii.practice.module03.task032;
 public class Arithmetic {
 
     public int add(int x,int y){
-        System.out.println("Sume is:");
+        System.out.println("Sume is: " + (x+y));
         return x+y;
     }
 }

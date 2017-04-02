@@ -16,7 +16,7 @@ public class USbank extends Bank {
     }
 
     public int getLimitOfFunding() {
-        return o;
+        return 0;
     }
 
     public double getMonthlyRate() {

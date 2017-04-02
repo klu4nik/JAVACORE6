@@ -1,11 +1,12 @@
-package main.java.com.andrii.practice.module04.task041;
+package main.java.com.andrii.practice.module04.task043;
 
-import java.util.Currency;
+
+import main.java.com.andrii.practice.module04.task042.Currency;
 
 /**
  * Created by Klu4nik on 25/03/2017.
  */
-public abstract class Bank {
+public abstract class Bank1 {
     private long id;
     private String bankCountry;
     private Currency currency;
@@ -14,7 +15,7 @@ public abstract class Bank {
     private long rating;
     private long totalCapital;
 
-    public Bank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
+    public Bank1(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         this.id = id;
         this.currency = currency;
         this.numberOfEmployees = numberOfEmployees;
@@ -85,7 +86,7 @@ public abstract class Bank {
 
     public abstract double getMonthlyRate();
 
-    public abstract int getCommission(int summ);
+    public abstract double getCommission(int summ);
 
     public double moneyPaidMonhlyForSalary() {
         return this.avrSalaryOfEmployee * this.numberOfEmployees;

@@ -1,5 +1,7 @@
 package main.java.com.andrii.practice.module04.task041;
 
+import java.util.Currency;
+
 /**
  * Created by Unicsoft on 27/03/2017.
  */
@@ -13,7 +15,8 @@ public class ChinaBank extends Bank {
     }
 
     public int getLimitOfFunding() {
-        return o;
+
+        return 0;
     }
 
     public double getMonthlyRate() {
@@ -21,6 +24,7 @@ public class ChinaBank extends Bank {
     }
 
     public int getCommission(int summ) {
+
         return 0;
     }
 }

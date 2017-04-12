@@ -1,11 +1,12 @@
 package main.java.com.andrii.practice.module04.task043;
 
 import main.java.com.andrii.practice.module04.task042.Currency;
+import main.java.com.andrii.practice.module04.task041.Bank;
 
 /**
  * Created by Klu4nik on 02/04/2017.
  */
-public class EUBank extends Bank1 {
+public class EUBank extends Bank {
     private static final int TRESHHOLD_USD_OR_EU_MONEY = 1000;
     private static final int LIMIT_WITHDRAWAL_FOR_USD = 2000;
     private static final int LIMIT_WITHDRAWAL_FOR_EUR = 2200;
@@ -23,7 +24,7 @@ public class EUBank extends Bank1 {
     }
 
     public int getLimitOfWithdrawal() {
-        if (this.getCurrency().equals(Currency.USD)){
+        if (this.getCurrency().equals(Currency.USD)) {
             return LIMIT_WITHDRAWAL_FOR_USD;
         }
         if (this.getCurrency().equals(Currency.EUR)) {

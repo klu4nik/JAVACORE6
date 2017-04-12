@@ -1,15 +1,14 @@
 package main.java.com.andrii.practice.module04.task043;
 
 import main.java.com.andrii.practice.module04.task042.Currency;
-import main.java.com.andrii.practice.module04.task043.Bank1;
-
+import main.java.com.andrii.practice.module04.task041.Bank;
 
 
 /**
  * Created by Klu4nik on 25/03/2017.
  */
 
-public class USbank extends Bank1 {
+public class USbank extends Bank {
     private static final int TRESHHOLD_USD_OR_EU_MONEY = 1000;
     private static final int LIMIT_WITHDRAWAL_FOR_USD = 1000;
     private static final int LIMIT_WITHDRAWAL_FOR_EUR = 1200;

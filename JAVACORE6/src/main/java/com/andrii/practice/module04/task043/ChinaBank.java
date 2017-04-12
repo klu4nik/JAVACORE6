@@ -1,11 +1,12 @@
 package main.java.com.andrii.practice.module04.task043;
 
 import main.java.com.andrii.practice.module04.task042.Currency;
+import main.java.com.andrii.practice.module04.task041.Bank;
 
 /**
  * Created by Unicsoft on 27/03/2017.
  */
-public class ChinaBank extends Bank1 {
+public class ChinaBank extends Bank {
     private static final int TRESHHOLD_USD_OR_EU_MONEY = 1000;
     private static final int LIMIT_WITHDRAWAL_FOR_USD = 100;
     private static final int LIMIT_WITHDRAWAL_FOR_EUR = 150;
@@ -67,6 +68,6 @@ public class ChinaBank extends Bank1 {
                 return COMISSION_FOR_EUR_MORE_1000;
             }
         }
-        return 0;
+        return 0.0;
     }
 }

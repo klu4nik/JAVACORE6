@@ -1,6 +1,6 @@
 package main.java.com.andrii.practice.module04.task041;
 
-import java.util.Currency;
+import main.java.com.andrii.practice.module04.task042.Currency;
 
 /**
  * Created by Klu4nik on 25/03/2017.
@@ -85,10 +85,9 @@ public abstract class Bank {
 
     public abstract double getMonthlyRate();
 
-    public abstract int getCommission(int summ);
+    public abstract double getCommission(int summ);
 
     public double moneyPaidMonhlyForSalary() {
         return this.avrSalaryOfEmployee * this.numberOfEmployees;
     }
-
 }

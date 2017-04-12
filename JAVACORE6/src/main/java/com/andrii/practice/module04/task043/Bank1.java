@@ -37,46 +37,57 @@ public abstract class Bank1 {
     }
 
     public int getNumberOfEmployees() {
+
         return this.numberOfEmployees;
     }
 
     public double getAvrSalaryOfEmployee() {
+
         return this.avrSalaryOfEmployee;
     }
 
     public long getRating() {
+
         return this.rating;
     }
 
     public long getTotalCapital() {
+
         return this.totalCapital;
     }
 
     public void setId(long id) {
+
         this.id = id;
     }
 
     public void setBankCountry(String bankCountry) {
+
         this.bankCountry = bankCountry;
     }
 
     public void setCurrency(Currency currency) {
+
         this.currency = currency;
     }
 
     public void setNumberOfEmployees(int numberOfEmployees) {
+
         this.numberOfEmployees = numberOfEmployees;
     }
 
     public void setAvrSalaryOfEmployee(double avrSalaryOfEmployee) {
+
         this.avrSalaryOfEmployee = avrSalaryOfEmployee;
     }
 
     public void setRating(long rating) {
+
         this.rating = rating;
     }
 
     public void setTotalCapital(long totalCapital) {
+
         this.totalCapital = totalCapital;
     }
 

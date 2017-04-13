@@ -1,6 +1,6 @@
 package main.java.com.andrii.practice.module04.task041;
 
-import java.util.Currency;
+import main.java.com.andrii.practice.module04.task042.Currency;
 
 /**
  * Created by Klu4nik on 02/04/2017.
@@ -22,7 +22,7 @@ public class EUBank extends Bank{
         return 0;
     }
 
-    public int getCommission(int summ) {
+    public double getCommission(int summ) {
         return 0;
     }
 }

@@ -1,6 +1,7 @@
 package main.java.com.andrii.practice.module04.task041;
+import main.java.com.andrii.practice.module04.task042.Currency;
 
-import java.util.Currency;
+
 
 /**
  * Created by Unicsoft on 27/03/2017.
@@ -23,7 +24,7 @@ public class ChinaBank extends Bank {
         return 0;
     }
 
-    public int getCommission(int summ) {
+    public double getCommission(int summ) {
 
         return 0;
     }

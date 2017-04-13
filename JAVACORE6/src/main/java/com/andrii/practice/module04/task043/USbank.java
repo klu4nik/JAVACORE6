@@ -37,7 +37,10 @@ public class USbank extends Bank {
     public int getLimitOfFunding() {
         if (this.getCurrency().equals(Currency.EUR)) {
             return LIMIT_FUNDING_FOR_EUR;
+        }else if (this.getCurrency().equals(Currency.USD)){
+            return 2147483647;
         }
+
         return -1;
 
     }

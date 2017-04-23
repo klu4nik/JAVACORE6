@@ -22,6 +22,32 @@ public class Room {
         this.cityName = cityName;
     }
 
+    @Override
+    public int hashCode() {
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + price;
+        result = 31 * result + persons;
+        result = 31 * result + (cityName != null ? cityName.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "id - " + getId() +
+                "  price - " + getPrice() + "  persons - " + getPersons() + "  city - " + getCityName() + "  hotel - " + getHotelName();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Room room = (Room) obj;
+        if (room.cityName != null) {
+            if (room.price == price && room.equals(this.cityName) && room.persons == persons) return true;
+            else return false;
+        } else return false;
+    }
+
     public void setId(long id) {
         this.id = id;
     }

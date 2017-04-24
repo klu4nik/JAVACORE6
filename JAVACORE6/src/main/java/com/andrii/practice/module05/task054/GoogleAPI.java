@@ -11,11 +11,11 @@ public class GoogleAPI {
     private Room rooms[] = new Room[5];
 
     public GoogleAPI() {
-        rooms[0] = new Room(1, 780, 2, "Leotel", "Lviv");
-        rooms[1] = new Room(2, 600, 2, "Grand canyon", "Kamianets Podilskiy");
-        rooms[2] = new Room(3, 700, 2, "Golosiyv", "Kyiv");
-        rooms[3] = new Room(4, 500, 3, "Druzi Hostel", "Kyiv");
-        rooms[4] = new Room(5, 700, 1, "Grand Pilipets", "Pilipets");
+        rooms[0] = new Room(1, 880, 2, "Dakh", "Lviv");
+        rooms[1] = new Room(2, 600, 2, "Kmotel", "Kamianets Podilskiy");
+        rooms[2] = new Room(3, 700, 2, "Obolon", "Kyiv");
+        rooms[3] = new Room(4, 500, 3, "Druzi", "Kyiv");
+        rooms[4] = new Room(5, 700, 1, "Pilipets", "Pilipets");
     }
 
 

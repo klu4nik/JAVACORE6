@@ -1,18 +1,16 @@
 package main.java.com.andrii.practice.module05.task054;
 
 import main.java.com.andrii.practice.module05.task051.Room;
-import main.java.com.andrii.practice.module05.task053.API;
 
 import java.util.ArrayList;
 
-
 /**
- * Created by Klu4nik on 23/04/2017.
+ * Created by Unicsoft on 24/04/2017.
  */
-public class BookingComAPI implements API {
+public class GoogleAPI {
     private Room rooms[] = new Room[5];
 
-    public BookingComAPI() {
+    public GoogleAPI() {
         rooms[0] = new Room(1, 780, 2, "Leotel", "Lviv");
         rooms[1] = new Room(2, 600, 2, "Grand canyon", "Kamianets Podilskiy");
         rooms[2] = new Room(3, 700, 2, "Golosiyv", "Kyiv");

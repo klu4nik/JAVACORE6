@@ -1,13 +1,14 @@
 package main.java.com.andrii.practice.module05.task054;
 
 import main.java.com.andrii.practice.module05.task051.Room;
+import main.java.com.andrii.practice.module05.task053.API;
 
 import java.util.ArrayList;
 
 /**
  * Created by Unicsoft on 24/04/2017.
  */
-public class TripAdvisorAPI {
+public class TripAdvisorAPI implements API{
     private Room rooms[] = new Room[5];
 
     public TripAdvisorAPI() {

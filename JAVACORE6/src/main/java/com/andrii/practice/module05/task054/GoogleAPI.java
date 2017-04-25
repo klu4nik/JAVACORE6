@@ -16,7 +16,7 @@ public class GoogleAPI implements API {
         rooms[1] = new Room(2, 600, 2, "Kmotel", "Kamianets Podilskiy");
         rooms[2] = new Room(3, 700, 2, "Obolon", "Kyiv");
         rooms[3] = new Room(4, 500, 3, "Druzi", "Kyiv");
-        rooms[4] = new Room(5, 700, 1, "Pilipets", "Pilipets");
+        rooms[4] = new Room(5, 700, 2, "Grand Pilipets", "Pilipets");
     }
 
 
@@ -24,10 +24,7 @@ public class GoogleAPI implements API {
         ArrayList<Room> findRoomsList = new ArrayList<Room>();
 
         for (Room room : rooms) {
-            if ((room.getPrice() == price)
-                    && (room.getPersons() == persons)
-                    && (room.getCityName().equals(city))
-                    && (room.getHotelName().equals(hotel))) {
+            if (room.equals(new Room(1, price, persons, city, hotel))) {
                 findRoomsList.add(room);
             }
 

@@ -34,17 +34,22 @@ public class Controller {
 
     public Room[] check(API api1, API api2) {
         ArrayList<Room> roomsEqualsInAPIs = new ArrayList<Room>();
+        //Room[] roomsApi1 = new Room[api1.getDB().length];
+        //Room[] roomsApi2 = new Room[api2.getDB().length];
         Room[] roomsApi1 = api1.getDB();
         Room[] roomsApi2 = api2.getDB();
         int countRooms = 0;
+
         for (Room api1Room : roomsApi1) {
             for (Room api2Room : roomsApi2) {
                 if (api1Room.equals(api2Room)) {
                     countRooms += 1;
                     roomsEqualsInAPIs.add(api1Room);
+
                 }
             }
         }
+        System.out.println("count: " + countRooms);
         return roomsEqualsInAPIs.toArray(new Room[roomsEqualsInAPIs.size()]);
     }
 

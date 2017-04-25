@@ -13,7 +13,7 @@ public class Room {
     private String hotelName;
     private String cityName;
 
-    public Room(long id, int price, int persons,  String hotelName, String cityName) {
+    public Room(long id, int price, int persons, String hotelName, String cityName) {
         this.id = id;
         this.price = price;
         this.persons = persons;
@@ -43,7 +43,8 @@ public class Room {
         if (obj == null || getClass() != obj.getClass()) return false;
         Room room = (Room) obj;
         if (room.cityName != null) {
-            if (room.price == price && room.equals(this.cityName) && room.persons == persons) return true;
+            if (room.price == price && room.cityName.equals(this.cityName) && room.persons == persons && room.getHotelName().equals(this.hotelName))
+                return true;
             else return false;
         } else return false;
     }

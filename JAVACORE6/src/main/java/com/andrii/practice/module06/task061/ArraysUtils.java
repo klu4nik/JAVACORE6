@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by Klu4nik on 25/04/2017.
  */
-public class ArraysUtils {
+public final class ArraysUtils {
     /**
      * Method   for  getting sum of  integer array
      *
@@ -18,7 +18,7 @@ public class ArraysUtils {
         for (int i = 0; i < arrayLength; i++) {
             sum = sum + array[i];
         }
-        System.out.println("The sum of array = " + sum);
+
         return sum;
     }
 
@@ -37,7 +37,7 @@ public class ArraysUtils {
                 min = array[i];
             }
         }
-        System.out.println("Min of array = " + min);
+
         return min;
     }
 
@@ -55,7 +55,7 @@ public class ArraysUtils {
                 max = array[i];
             }
         }
-        System.out.println("Max of array = " + max);
+
         return max;
     }
 
@@ -74,7 +74,6 @@ public class ArraysUtils {
             }
         }
         if (max >= 0) {
-            System.out.println("Max positive element  in  array =" + max);
             return max;
         } else
             System.out.println("There are no  positive elements  in array");
@@ -95,7 +94,7 @@ public class ArraysUtils {
             multi = multi * array[i];
 
         }
-        System.out.println("Multiplication  of array = " + multi);
+
         return multi;
     }
 
@@ -106,12 +105,12 @@ public class ArraysUtils {
      * @param array
      * @return
      */
-    public int[] modulus(int array[]) {
+    public static int[] modulus(int array[]) {
         int[] module = {0, 0};
         module[0] = Math.abs(array[0]);
         int arrayLength = array.length;
         module[1] = Math.abs(array[arrayLength - 1]);
-        System.out.println("The modulus of first and last element at int array is" + module.toString());
+
         return module;
     }
 
@@ -138,7 +137,7 @@ public class ArraysUtils {
                 secondLargestElement = array[i];
             }
         }
-        System.out.println("The second largest element = " + secondLargestElement);
+
         return secondLargestElement;
     }
 
@@ -160,12 +159,12 @@ public class ArraysUtils {
             }
         }
         int[] evenElementArray = new int[evenElementsList.size()];
-        for (int i = 0; i <evenElementsList.size(); i++) {
+        for (int i = 0; i < evenElementsList.size(); i++) {
             evenElementArray[i] = evenElementsList.get(i);
 
         }
+
         return evenElementArray;
     }
-
 
 }

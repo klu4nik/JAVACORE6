@@ -16,7 +16,7 @@ public class ArrayMain {
         print(ArraysUtils.reverse(testArray), "Reversed Array: ");
         print(ArraysUtils.multiplication(testArray), "The result of multiplication = ");
         print(ArraysUtils.findEvenElements(testArray), "Even elements: ");
-        print(ArraysUtils.secondLargest(testArray),"The second largest element in array is: ");
+        print(ArraysUtils.secondLargest(testArray), "The second largest element in array is: ");
         print(ArraysUtils.modulus(testArray), "The modulus of first and last element at int array is");
 
 

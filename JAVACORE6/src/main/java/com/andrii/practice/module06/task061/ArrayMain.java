@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Created by Klu4nik on 25/04/2017.
  */
-public class JavaMain {
+public class ArrayMain {
 
     public static void main(String[] args) {
         int[] testArray = {1, 12, 15, 12, 18, -2, -3, 10};

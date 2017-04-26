@@ -9,11 +9,13 @@ import java.util.ArrayList;
  */
 public final class UserUtils {
     public static User[] uniqueUsers(User[] users) {
+        User [] userWithowNulls = new User[deleteEmptyUsers(users).length];
+        userWithowNulls = deleteEmptyUsers(users);
         ArrayList<User> uniqueUsers = new ArrayList<User>();
         boolean state = true;
-        for (User user : users) {
-            for (User userTemp : users) {
-                if (userTemp.equals(user)) {
+        for (User user : userWithowNulls) {
+            for (User userTemp : userWithowNulls) {
+                if (userTemp.equals(userWithowNulls)) {
                     state = false;
                     break;
                 }
@@ -50,9 +52,15 @@ public final class UserUtils {
     }
 
     public static final long[] getUsersId(User[] users) {
-        long[] idArray = new long[users.length];
+        ArrayList<Long> idList = new ArrayList<Long>();
+
         for (int i = 0; i < users.length; i++) {
-            idArray[i] = users[i].getId();
+            if (users[i] != null) idList.add(users[i].getId());
+        }
+        long[] idArray = new long[idList.size()];
+
+        for (int i = 0; i < idList.size(); i++) {
+            idArray[i] = idList.get(i);
         }
         return idArray;
     }
@@ -65,6 +73,15 @@ public final class UserUtils {
             }
         }
         return notEmptyUser.toArray(new User[notEmptyUser.size()]);
+    }
+
+    public static final void printUsersArray(User[] users) {
+        for (User usersArray : users) {
+            if (usersArray != null)
+                System.out.println(usersArray.toString());
+            else
+                System.out.println("Empty cell");
+        }
     }
 }
 

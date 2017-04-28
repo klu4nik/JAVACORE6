@@ -1,6 +1,6 @@
 package main.java.com.andrii.practice.module07.task071;
 
-import java.util.Currency;
+import main.java.com.andrii.practice.module07.task071.Currency;
 
 /**
  * Created by Unicsoft on 28/04/2017.
@@ -69,5 +69,17 @@ public class Order {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", price=" + price +
+                ", currency=" + currency +
+                ", itemName='" + itemName + '\'' +
+                ", shopIdentificator='" + shopIdentificator + '\'' +
+                ", user=" + user +
+                '}';
     }
 }

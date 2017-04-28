@@ -17,7 +17,17 @@ public class Order {
         return id;
     }
 
+    public Order(long id, int price, Currency currency, String itemName, String shopIdentificator, User user) {
+        this.id = id;
+        this.price = price;
+        this.currency = currency;
+        this.itemName = itemName;
+        this.shopIdentificator = shopIdentificator;
+        this.user = user;
+    }
+
     public void setId(long id) {
+
         this.id = id;
     }
 

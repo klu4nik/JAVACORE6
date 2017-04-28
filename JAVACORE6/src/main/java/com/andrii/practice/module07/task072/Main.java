@@ -28,15 +28,15 @@ public class Main {
 
         List<Order> orderList = new LinkedList<Order>();
         orderList.add(new Order(1, 5000, Currency.UAH, "iPhone5", "Rozetka", user[0]));
-        orderList.add(new Order(1, 200, Currency.USD, "Ken", "Rozetka", user[1]));
-        orderList.add(new Order(1, 300, Currency.UAH, "Barby", "Rozetka", user[2]));
-        orderList.add(new Order(1, 10, Currency.USD, "iPad air", "Rozetka", user[3]));
-        orderList.add(new Order(1, 10, Currency.UAH, "Moonlight", "Rozetka", user[4]));
-        orderList.add(new Order(1, 30, Currency.UAH, "Sun", "Rozetka", user[5]));
-        orderList.add(new Order(1, 100, Currency.USD, "Item", "Rozetka", user[6]));
-        orderList.add(new Order(1, 500, Currency.USD, "iPhone SE", "Rozetka", user[7]));
-        orderList.add(new Order(1, 600, Currency.UAH, "Book", "Rozetka", user[8]));
-        orderList.add(new Order(1, 400, Currency.UAH, "Case", "Rozetka", user[9]));
+        orderList.add(new Order(2, 200, Currency.USD, "Ken", "Rozetka", user[1]));
+        orderList.add(new Order(3, 300, Currency.UAH, "Barby", "Rozetka", user[2]));
+        orderList.add(new Order(4, 10, Currency.USD, "iPad air", "Rozetka", user[3]));
+        orderList.add(new Order(5, 10, Currency.UAH, "Moonlight", "Rozetka", user[4]));
+        orderList.add(new Order(6, 30, Currency.UAH, "Sun", "Rozetka", user[5]));
+        orderList.add(new Order(7, 100, Currency.USD, "Item", "Rozetka", user[6]));
+        orderList.add(new Order(8, 500, Currency.USD, "iPhone SE", "Rozetka", user[7]));
+        orderList.add(new Order(9, 600, Currency.UAH, "Book", "Rozetka", user[8]));
+        orderList.add(new Order(10, 400, Currency.UAH, "Case", "Rozetka", user[9]));
 
 
         Comparator<Order> priceCompareDesc = new Comparator<Order>() {

@@ -10,7 +10,7 @@ public class Main {
     static final int SIZE_CONST_2 = 10000;
     public static void main(String[] args) {
         ArrayList<String> list = ListUtils.createListArrayString(SIZE_CONST_1);
-        System.out.println(list.get(100));
+        System.out.println(ListUtils.getOperationExecutionTime(list,OperationType.GET, 600,ListType.INTEGER_LIST));
 
     }
 }

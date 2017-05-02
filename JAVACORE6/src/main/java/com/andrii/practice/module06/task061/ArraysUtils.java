@@ -12,7 +12,7 @@ public final class ArraysUtils {
      * @param array
      * @return
      */
-    public static int sum(int array[]) {
+    public static final int sum(int array[]) {
         int sum = 0;
         int arrayLength = array.length;
         for (int i = 0; i < arrayLength; i++) {
@@ -29,7 +29,7 @@ public final class ArraysUtils {
      * @param array
      * @return
      */
-    public static int min(int array[]) {
+    public static final int min(int array[]) {
         int min = array[0];
         int arrayLength = array.length;
         for (int i = 1; i < arrayLength; i++) {
@@ -47,7 +47,7 @@ public final class ArraysUtils {
      * @param array
      * @return
      */
-    public static int max(int array[]) {
+    public static final int max(int array[]) {
         int max = array[0];
         int arrayLength = array.length;
         for (int i = 1; i < arrayLength; i++) {
@@ -65,7 +65,7 @@ public final class ArraysUtils {
      * @param array
      * @return
      */
-    public static int maxPositive(int array[]) {
+    public static final int maxPositive(int array[]) {
         int max = 0;
         int arrayLength = array.length;
         for (int i = 0; i < arrayLength; i++) {
@@ -87,7 +87,7 @@ public final class ArraysUtils {
      * @param array
      * @return
      */
-    public static int multiplication(int array[]) {
+    public static final int multiplication(int array[]) {
         int multi = array[0];
         int arrayLength = array.length;
         for (int i = 1; i < arrayLength; i++) {
@@ -105,7 +105,7 @@ public final class ArraysUtils {
      * @param array
      * @return
      */
-    public static int[] modulus(int array[]) {
+    public static final int[] modulus(int array[]) {
         int[] module = {0, 0};
         module[0] = Math.abs(array[0]);
         int arrayLength = array.length;
@@ -121,7 +121,7 @@ public final class ArraysUtils {
      * @param array
      * @return
      */
-    public static int secondLargest(int array[]) {
+    public static final int secondLargest(int array[]) {
         int max = array[0];
         int indexOfMaxElement = 0;
         int arrayLength = array.length;
@@ -141,7 +141,7 @@ public final class ArraysUtils {
         return secondLargestElement;
     }
 
-    public static int[] reverse(int[] array) {
+    public static final int[] reverse(int[] array) {
         int[] reversedArray = new int[array.length];
         for (int i = 0; i < array.length; i++) {
             reversedArray[i] = array[array.length - i - 1];
@@ -150,7 +150,7 @@ public final class ArraysUtils {
         return reversedArray;
     }
 
-    public static int[] findEvenElements(int[] array) {
+    public static final int[] findEvenElements(int[] array) {
         ArrayList<Integer> evenElementsList = new ArrayList<Integer>();
         int evenElementsCounter = 0;
         for (int element : array) {

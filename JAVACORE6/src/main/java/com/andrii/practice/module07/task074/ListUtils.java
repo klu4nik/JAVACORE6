@@ -2,6 +2,7 @@ package main.java.com.andrii.practice.module07.task074;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Klu4nik on 28/04/2017.
@@ -39,7 +40,7 @@ public class ListUtils {
         return list;
     }
 
-    public static final long getOperationExecutionTime(ArrayList list, OperationType operationType, int position, ListType listType) {
+    public static final String getOperationExecutionTime(List list, OperationType operationType, int position, ListType listType) {
         final long startTime = System.nanoTime();
         switch (operationType) {
             case DELETE:
@@ -49,18 +50,22 @@ public class ListUtils {
                 list.get(position);
                 break;
             case ADD:
-                if (listType == ListType.STRING_LIST)
+                if (listType == ListType.STRING_ARRAY_LIST || listType == ListType.STRING_LINKED_LIST)
                     list.add("Updated");
-                if (listType == ListType.INTEGER_LIST)
+                if (listType == ListType.INTEGER_ARRAY_LIST || listType == ListType.INTEGER_LINKED_LIST)
                     list.add(-1);
                 break;
             case SET:
-                if (listType == ListType.STRING_LIST)
+                if (listType == ListType.STRING_ARRAY_LIST || listType == ListType.STRING_LINKED_LIST)
                     list.set(position, "Updated");
-                if (listType == ListType.INTEGER_LIST)
+                if (listType == ListType.INTEGER_ARRAY_LIST || listType == ListType.INTEGER_LINKED_LIST)
                     list.set(position, -1);
         }
         final long endTime = System.nanoTime();
-        return endTime - startTime;
+        long execTime = (endTime - startTime);
+        return "Execution time of operation "
+                + operationType.toString() + " for "
+                + listType.toString()
+                + " is " + execTime + " ns";
     }
 }

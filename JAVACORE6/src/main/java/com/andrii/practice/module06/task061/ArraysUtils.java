@@ -6,6 +6,9 @@ import java.util.ArrayList;
  * Created by Klu4nik on 25/04/2017.
  */
 public final class ArraysUtils {
+    private ArraysUtils() {
+    }
+
     /**
      * Method   for  getting sum of  integer array
      *

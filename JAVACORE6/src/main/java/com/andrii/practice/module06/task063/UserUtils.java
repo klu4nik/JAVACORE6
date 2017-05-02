@@ -8,8 +8,11 @@ import java.util.ArrayList;
  * Created by Unicsoft on 26/04/2017.
  */
 public final class UserUtils {
+    private UserUtils() {
+    }
+
     public static User[] uniqueUsers(User[] users) {
-        User [] userWithowNulls = new User[deleteEmptyUsers(users).length];
+        User[] userWithowNulls = new User[deleteEmptyUsers(users).length];
         userWithowNulls = deleteEmptyUsers(users);
         ArrayList<User> uniqueUsers = new ArrayList<User>();
         boolean state = true;

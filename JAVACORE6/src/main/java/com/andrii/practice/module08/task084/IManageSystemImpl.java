@@ -3,10 +3,7 @@ package main.java.com.andrii.practice.module08.task084;
 import main.java.com.andrii.practice.module08.task082.Food;
 import main.java.com.andrii.practice.module08.task083.IManageSystem;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by Klu4nik on 02/05/2017.
@@ -40,26 +37,50 @@ public class IManageSystemImpl implements IManageSystem {
 
     @Override
     public void deleteById(int id) {
+        for (Map.Entry<Food, Double> databaseItem : this.database.entrySet()) {
+            if (databaseItem.getKey() != null && databaseItem.getKey().getId() == id) {
+                this.database.remove(databaseItem.getKey());
+                System.out.println("Item " + databaseItem.getKey().toString() + "with id" + id + " was delete from database");
+            }
+        }
 
     }
 
     @Override
     public Object get(int id) {
+        for (Map.Entry<Food, Double> databaseItem : this.database.entrySet()) {
+            if (databaseItem.getKey() != null && databaseItem.getKey().getId() == id) {
+                System.out.println("Item with id " + id + " found in database");
+                return databaseItem.getKey();
+            }
+        }
         return null;
     }
 
     @Override
     public Double getPrice(Object obj) {
-        return null;
+        Food foodObj = (Food) obj;
+        if (this.database.containsKey(obj)) {
+            System.out.println();
+            return this.database.get(obj);
+        } else {
+            System.out.println("Item didn't find");
+            return null;
+        }
+
     }
 
     @Override
     public Set getProducts() {
-        return null;
+        return this.database.keySet();
     }
 
     @Override
     public List<Double> getPrices() {
-        return null;
+        List<Double> priceList = new ArrayList();
+        for (Map.Entry<Food,Double> databaseItem : this.database.entrySet()){
+            priceList.add(databaseItem.getValue());
+        }
+        return priceList;
     }
 }

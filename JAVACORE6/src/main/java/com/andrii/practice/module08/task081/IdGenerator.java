@@ -7,7 +7,7 @@ public final class IdGenerator {
     public static final long createId(String name, Country country, int expiration) {
         int id = name.hashCode();
         id = 31 * id + country.hashCode();
-        id = 31 * id + expiration;
+        id = 31 * id + (int) (expiration ^ (expiration >>> 32));
         return id;
 
     }

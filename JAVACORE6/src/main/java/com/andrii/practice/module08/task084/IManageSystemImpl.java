@@ -36,18 +36,19 @@ public class IManageSystemImpl implements IManageSystem {
     }
 
     @Override
-    public void deleteById(int id) {
+    public void deleteById(long id) {
         for (Map.Entry<Food, Double> databaseItem : this.database.entrySet()) {
-            if (databaseItem.getKey() != null && databaseItem.getKey().getId() == id) {
+            if (databaseItem.getKey().getId() == id) {
                 this.database.remove(databaseItem.getKey());
                 System.out.println("Item " + databaseItem.getKey().toString() + "with id" + id + " was delete from database");
+                break;
             }
         }
 
     }
 
     @Override
-    public Object get(int id) {
+    public Object get(long id) {
         for (Map.Entry<Food, Double> databaseItem : this.database.entrySet()) {
             if (databaseItem.getKey() != null && databaseItem.getKey().getId() == id) {
                 System.out.println("Item with id " + id + " found in database");
@@ -78,9 +79,11 @@ public class IManageSystemImpl implements IManageSystem {
     @Override
     public List<Double> getPrices() {
         List<Double> priceList = new ArrayList();
-        for (Map.Entry<Food,Double> databaseItem : this.database.entrySet()){
+        for (Map.Entry<Food, Double> databaseItem : this.database.entrySet()) {
             priceList.add(databaseItem.getValue());
         }
         return priceList;
     }
+
+
 }

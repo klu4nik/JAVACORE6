@@ -2,13 +2,11 @@ package main.java.com.andrii.practice.module08.task085;
 
 import main.java.com.andrii.practice.module08.task081.Country;
 import main.java.com.andrii.practice.module08.task082.Food;
-import main.java.com.andrii.practice.module08.task083.IManageSystem;
 import main.java.com.andrii.practice.module08.task084.IManageSystemImpl;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -19,25 +17,66 @@ public class Main {
 
     public static void main(String[] args) {
 
-        manageSystem.save(new Food("Borsch", Country.UKRAINE, 35), 35);
-        manageSystem.save(new Food("Kompot", Country.UKRAINE, 45), 45);
-        manageSystem.save(new Food("Tea", Country.AUSTRIA, 25), 25);
-        manageSystem.save(new Food("Cofee", Country.UKRAINE, 25), 25);
-        manageSystem.save(new Food("Ice-cream", Country.UKRAINE, 25), 25);
-        //Printing of list of food
-        Set<Food> listFood = manageSystem.getProducts();
-        System.out.println(chooseIdFrom(listFood));
+        manageSystem.save(new Food("Borsch", Country.UKRAINE, 15), 35);
+        manageSystem.save(new Food("Kompot", Country.UKRAINE, 25), 45);
+        manageSystem.save(new Food("Tea", Country.AUSTRIA, 5), 25);
+        manageSystem.save(new Food("Cofee", Country.UKRAINE, 5), 25);
+        manageSystem.save(new Food("Ice-cream", Country.UKRAINE, 5), 25);
+
+        for (Object foodList : manageSystem.getProducts()
+                ) {
+            System.out.println(((Food) foodList).toString());
+
+        }
+        System.out.println("\nDelete element from list");
+        manageSystem.deleteById(chooseIdFrom(manageSystem.getProducts()).getId());
+        System.out.println("\nList after deleting");
+        for (Object foodList : manageSystem.getProducts()
+                ) {
+            System.out.println(((Food) foodList).toString());
+
+        }
+        System.out.println("\n Get prices");
+
+        for (Double priceItem : manageSystem.getPrices()
+                ) {
+            System.out.println(priceItem);
+        }
+
+        System.out.println("\nGet price for item:\n"
+                + manageSystem.getPrice(chooseIdFrom(manageSystem.getProducts())));
+
+        System.out.println("\nGet item by id\n"
+                + manageSystem.get(chooseIdFrom(manageSystem.getProducts()).getId()));
+
+        System.out.println("\nGet prices:\n");
+        for (Double priceItem : manageSystem.getPrices()
+                ) {
+            System.out.println(priceItem);
+
+        }
+
+        System.out.println("\nDelete item from database:\n");
+        manageSystem.delete(chooseIdFrom(manageSystem.getProducts()));
+
+        System.out.println("\nList after deleting");
+        for (Object foodList : manageSystem.getProducts()
+                ) {
+            System.out.println(((Food) foodList).toString());
+
+        }
+
 
 
 
     }
 
-    public static long chooseIdFrom(Set<Food> food) {
+    public static Food chooseIdFrom(Set<Food> food) {
         System.out.println("Choose dish which you want to modify");
 
-        ArrayList<Food> foodArrayList = new ArrayList<>();
+        ArrayList<Food> foodArrayList = new ArrayList<Food>();
         for (Food dish : food) {
-            foodArrayList.add(dish);
+            foodArrayList.add(new Food(dish.getName(), dish.getCountry(), dish.getExpiration()));
         }
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -52,12 +91,16 @@ public class Main {
                     String choice = reader.readLine();
                     if (choice != "q") {
                         number = Integer.parseInt(choice);
-                    } else return 0;
+                        if (number < 0) {
+                            number = -1;
+                        }
+                    } else return null;
                 } catch (Exception e) {
                 }
             } while (number == -1);
         }
-        return foodArrayList.get(number).getId();
+        System.out.println(foodArrayList.get(number));
+        return foodArrayList.get(number);
 
     }
 

@@ -7,7 +7,7 @@ import main.java.com.andrii.practice.module08.task081.IdGenerator;
  * Created by Klu4nik on 02/05/2017.
  */
 public class Food {
-    private static long id;
+    private long id;
     private String name;
     private Country country;
     private int expiration;
@@ -38,7 +38,7 @@ public class Food {
         return result;
     }
 
-    public static long getId() {
+    public long getId() {
         return id;
     }
 
@@ -52,5 +52,14 @@ public class Food {
 
     public int getExpiration() {
         return expiration;
+    }
+
+    @Override
+    public String toString() {
+        return "Food{" + "Id: " + id +
+                ", name='" + name + '\'' +
+                ", country=" + country +
+                ", expiration=" + expiration +
+                '}';
     }
 }

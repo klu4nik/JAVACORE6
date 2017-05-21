@@ -13,9 +13,9 @@ public interface IManageSystem<T> {
 
     void delete(T obj);
 
-    void deleteById(int id);
+    void deleteById(long id);
 
-    T get(int id);
+    T get(long id);
 
     Double getPrice(T obj);
 

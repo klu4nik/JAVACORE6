@@ -29,7 +29,7 @@ public class Main {
 
         }
         System.out.println("\nDelete element from list");
-        manageSystem.deleteById(chooseIdFrom(manageSystem.getProducts()).getId());
+        manageSystem.deleteById(chooseFoodItemFromSet(manageSystem.getProducts()).getId());
         System.out.println("\nList after deleting");
         for (Object foodList : manageSystem.getProducts()
                 ) {
@@ -44,10 +44,10 @@ public class Main {
         }
 
         System.out.println("\nGet price for item:\n"
-                + manageSystem.getPrice(chooseIdFrom(manageSystem.getProducts())));
+                + manageSystem.getPrice(chooseFoodItemFromSet(manageSystem.getProducts())));
 
         System.out.println("\nGet item by id\n"
-                + manageSystem.get(chooseIdFrom(manageSystem.getProducts()).getId()));
+                + manageSystem.get(chooseFoodItemFromSet(manageSystem.getProducts()).getId()));
 
         System.out.println("\nGet prices:\n");
         for (Double priceItem : manageSystem.getPrices()
@@ -57,7 +57,7 @@ public class Main {
         }
 
         System.out.println("\nDelete item from database:\n");
-        manageSystem.delete(chooseIdFrom(manageSystem.getProducts()));
+        manageSystem.delete(chooseFoodItemFromSet(manageSystem.getProducts()));
 
         System.out.println("\nList after deleting");
         for (Object foodList : manageSystem.getProducts()
@@ -71,7 +71,7 @@ public class Main {
 
     }
 
-    public static Food chooseIdFrom(Set<Food> food) {
+    public static Food chooseFoodItemFromSet(Set<Food> food) {
         System.out.println("Choose dish which you want to modify");
 
         ArrayList<Food> foodArrayList = new ArrayList<Food>();
